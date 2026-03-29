@@ -1,0 +1,172 @@
+﻿Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Labels,Labels,Labels,Labels,Labels,Labels,Labels,Labels,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Custom field (Development),Custom field (Issue color),Custom field (Rank),Custom field (Start date),Custom field (Story point estimate),Custom field (Team),Custom field (Vulnerability),Status Category,Status Category Changed
+TechDebt: Centralize sensor confidence thresholds,AP-52,10063,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Low,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:adas,epic:lane-safety,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,techdebt:true,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+This is intentional tech debt for refinement/planning.",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000cv:,,,,,To Do,3/18/2026 13:09
+TechDebt: Add correlation-id propagation middleware,AP-51,10062,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,techdebt:true,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+This is intentional tech debt for refinement/planning.",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000cn:,,,,,To Do,3/18/2026 13:09
+TechDebt: Document performance baselines,AP-50,10061,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,techdebt:true,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+This is intentional tech debt for refinement/planning.",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000cf:,,,,,To Do,3/18/2026 13:09
+TechDebt: Improve simulation scenario coverage,AP-49,10060,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:adas,epic:lane-safety,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,techdebt:true,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+This is intentional tech debt for refinement/planning.",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000c7:,,,,,To Do,3/18/2026 13:09
+TechDebt: Reduce flaky UI tests,AP-48,10059,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Low,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,techdebt:true,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+This is intentional tech debt for refinement/planning.",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000bz:,,,,,To Do,3/18/2026 13:09
+TechDebt: Add consistent logging wrapper,AP-47,10058,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,techdebt:true,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+This is intentional tech debt for refinement/planning.",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000br:,,,,,To Do,3/18/2026 13:09
+Bug: Rain scenario reduces lane confidence below threshold,AP-46,10057,Bug,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:adas,duplicate-group:rain-lane,epic:lane-safety,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Relates to duplicate story group
+Needs triage",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000bj:,,,,,To Do,3/18/2026 13:09
+Bug: Audio dropout when navigation starts,AP-45,10056,Bug,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Expected: no dropout
+Actual: brief mute",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000bb:,,,,,To Do,3/18/2026 13:09
+Bug: Log export bundle missing files,AP-44,10055,Bug,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Expected: includes diag logs
+Actual: missing diag logs",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000b3:,,,,,To Do,3/18/2026 13:09
+Bug: OTA progress stuck at 99%,AP-43,10054,Bug,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Steps: poor network
+Expected: complete
+Actual: stuck",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000av:,,,,,To Do,3/18/2026 13:09
+Bug: Voice command latency spikes after resume,AP-42,10053,Bug,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Steps: resume from sleep
+Expected: stable latency
+Actual: spikes",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000an:,,,,,To Do,3/18/2026 13:09
+Bug: Lane alert triggers twice,AP-41,10052,Bug,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:adas,epic:lane-safety,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Steps: ...
+Expected: single alert
+Actual: duplicate alerts",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000af:,,,,,To Do,3/18/2026 13:09
+OTA: rollback on failed boot - acceptance criteria,AP-40,10051,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,needs:ac,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Define rollback triggers and logs.
+Repo: bitbucket://platform/ota",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i000a7:,,,,,To Do,3/18/2026 13:09
+Lane assist: handle construction zones,AP-39,10050,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Low,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:adas,epic:lane-safety,needs:ac,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Define expected behavior.
+Repo: bitbucket://adas/lane-safety",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0009z:,,,,,To Do,3/18/2026 13:09
+IVI: audio dropouts under CPU load,AP-38,10049,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,needs:repro,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Need load profile + repro.
+Repo: bitbucket://ivi/performance",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0009r:,,,,,To Do,3/18/2026 13:09
+Platform: correlation IDs missing in some logs,AP-37,10048,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,needs:trace,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Identify services missing IDs.
+Repo: bitbucket://platform/diagnostics",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0009j:,,,,,To Do,3/18/2026 13:09
+ADAS: drowsiness alert false positives,AP-36,10047,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:adas,epic:lane-safety,needs:data,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Need dataset definition.
+Repo: bitbucket://adas/dms",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0009b:,,,,,To Do,3/18/2026 13:09
+IVI: reduce boot time,AP-35,10046,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Low,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,needs:split,oversized:true,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Too broad; split by services.
+Repo: bitbucket://ivi/performance",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i00093:,,,,,To Do,3/18/2026 13:09
+OTA: verify signature failure messaging,AP-34,10045,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Low,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,needs:ac,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Define expected UX + logging.
+Repo: bitbucket://platform/ota",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0008v:,,,,,To Do,3/18/2026 13:09
+Lane departure: add sensitivity presets,AP-33,10044,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:adas,epic:lane-safety,needs:ux,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Define presets & legal constraints.
+Repo: bitbucket://adas/lane-safety",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0008n:,,,,,To Do,3/18/2026 13:09
+IVI: Voice command occasionally times out,AP-32,10043,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,needs:repro,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Need repro steps + logs.
+Repo: bitbucket://ivi/performance",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0008f:,,,,,To Do,3/18/2026 13:09
+Diagnostics: standardize error codes,AP-31,10042,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,needs:scope,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Which modules included?
+Repo: bitbucket://platform/diagnostics",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i00087:,,,,,To Do,3/18/2026 13:09
+ACC: smooth deceleration feels jerky sometimes,AP-30,10041,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:adas,epic:lane-safety,needs:metrics,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Needs measurable comfort metric.
+Repo: bitbucket://adas/acc",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0007z:,,,,,To Do,3/18/2026 13:09
+Platform: Rate-limit log export bundles,AP-29,10040,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Low,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,ready:true,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Acceptance Criteria:
+- Log bundle export cannot exceed N exports/hour (configurable).
+- Exports are audited with correlation id.
+- Error message shown when limit exceeded.
+DOORS: PLAT-REQ-3330
+Repo: bitbucket://platform/diagnostics",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0007r:,,,,,To Do,3/18/2026 13:09
+IVI: Add P95 latency metric to performance dashboard,AP-28,10039,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:09,3/18/2026 13:09,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,ready:true,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Acceptance Criteria:
+- Dashboard shows P95 latency for Home screen load.
+- Metric refreshes every 30s.
+- Data source documented.
+- Unit tests added for metric aggregation.
+DOORS: INFO-REQ-1188
+Repo: bitbucket://ivi/performance",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0007j:,,,,,To Do,3/18/2026 13:09
+Heavy rain scenario: lane boundaries not detected reliably,AP-27,10038,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:08,3/18/2026 13:08,,,,0,dataset:backlog-ref,domain:adas,duplicate-group:rain-lane,epic:lane-safety,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Seems similar to another ticket.
+Need consolidate.
+DOORS: ADAS-REQ-2077
+Repo: bitbucket://adas/lane-safety",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0007b:,,,,,To Do,3/18/2026 13:09
+Lane detection fails in heavy rain,AP-26,10037,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:08,3/18/2026 13:08,,,,0,dataset:backlog-ref,domain:adas,duplicate-group:rain-lane,epic:lane-safety,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Observed in simulation: heavy rain reduces lane confidence.
+Acceptance criteria missing.
+DOORS: ADAS-REQ-2077
+Repo: bitbucket://adas/lane-safety",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i00073:,,,,,To Do,3/18/2026 13:08
+OTA: show progress and handle offline mode,AP-25,10036,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:08,3/18/2026 13:08,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,needs:ac,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Progress UI should be improved.
+Offline mode should not break update flow.
+Need clarification on UX requirements.
+DOORS: PLAT-REQ-3013
+EA: EA::OTA::UpdateUX
+Repo: bitbucket://platform/ota",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0006v:,,,,,To Do,3/18/2026 13:08
+Improve infotainment performance,AP-24,10035,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:08,3/18/2026 13:08,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,vague:true,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Users report the system is slow sometimes.
+No acceptance criteria.
+No metrics (P95/P99) targets.
+DOORS: INFO-REQ-1102
+Repo: bitbucket://ivi/performance",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0006n:,,,,,To Do,3/18/2026 13:08
+Lane departure: improve detection and alerts end-to-end,AP-23,10034,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:08,3/18/2026 13:08,,,,0,dataset:backlog-ref,domain:adas,epic:lane-safety,needs:split,oversized:true,ready:false,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+This story is too big and mixes detection + UX + logging.
+Missing measurable targets and detailed AC.
+DOORS: ADAS-REQ-2041
+EA: EA::LaneAssist::EndToEnd
+Repo: bitbucket://adas/lane-safety",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0006f:,,,,,To Do,3/18/2026 13:08
+Platform: OTA & Diagnostics,AP-22,10033,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:08,3/18/2026 13:08,,,,0,dataset:backlog-ref,domain:platform,epic:platform-ota-diag,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Dataset: backlog refinement reference
+Mixed-quality backlog for refinement. Repo: bitbucket://platform/ota",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i00067:,,,,,To Do,3/18/2026 13:08
+IVI: Performance & UX,AP-21,10032,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:08,3/18/2026 13:08,,,,0,dataset:backlog-ref,domain:ivi,epic:ivi-performance,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Dataset: backlog refinement reference
+Mixed-quality backlog for refinement. Repo: bitbucket://ivi/performance",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0005z:,,,,,To Do,3/18/2026 13:08
+ADAS: Lane Safety Enhancements,AP-20,10031,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Highest,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 13:08,3/18/2026 13:08,,,,0,dataset:backlog-ref,domain:adas,epic:lane-safety,run:AP-BACKLOG-REF-2026-03-18-v1,synthetic:true,,,,"RunTag: run:AP-BACKLOG-REF-2026-03-18-v1
+Synthetic: true
+Dataset: backlog refinement reference
+Mixed-quality backlog for refinement. Repo: bitbucket://adas/lane-safety",,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0005r:,,,,,To Do,3/18/2026 13:08
+Alert delay at high speed,AP-19,10028,Bug,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:54,3/18/2026 12:54,,,,0,,,,,,,,,Alert delayed when vehicle speed > 80 km/h,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0005j:,,,,,To Do,3/18/2026 12:54
+Integrate sensor input with alert system,AP-18,10027,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:54,3/18/2026 12:54,,,,0,,,,,,,,,Task for story: Lane departure alert,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0005b:,,,,,To Do,3/18/2026 12:54
+Develop driver alert UI,AP-17,10026,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:54,3/18/2026 12:54,,,,0,,,,,,,,,Task for story: Lane departure alert,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i00053:,,,,,To Do,3/18/2026 12:54
+Implement lane detection logic,AP-16,10025,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:54,3/18/2026 12:54,,,,0,,,,,,,,,Task for story: Lane departure alert,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0004v:,,,,,To Do,3/18/2026 12:54
+Lane departure alert,AP-15,10024,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:54,3/18/2026 12:54,,,,0,,,,,,,,,System shall alert driver when vehicle deviates from lane.,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0004n:,,,,,To Do,3/18/2026 12:54
+Lane Safety System,AP-14,10023,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:54,3/18/2026 12:54,,,,0,,,,,,,,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0004f:,,,,,To Do,3/18/2026 12:54
+Alert delay at high speed,AP-13,10022,Bug,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:52,3/18/2026 12:52,,,,0,,,,,,,,,Alert delayed when vehicle speed > 80 km/h,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i00047:,,,,,To Do,3/18/2026 12:52
+Integrate sensor input with alert system,AP-12,10021,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:52,3/18/2026 12:52,,,,0,,,,,,,,,Task for story: Lane departure alert,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0003z:,,,,,To Do,3/18/2026 12:52
+Develop driver alert UI,AP-11,10020,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:52,3/18/2026 12:52,,,,0,,,,,,,,,Task for story: Lane departure alert,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0003r:,,,,,To Do,3/18/2026 12:52
+Implement lane detection logic,AP-10,10019,Task,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:52,3/18/2026 12:52,,,,0,,,,,,,,,Task for story: Lane departure alert,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0003j:,,,,,To Do,3/18/2026 12:52
+Lane departure alert,AP-9,10018,Story,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,High,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:52,3/18/2026 12:52,3/18/2026 22:12,,,0,,,,,,,,,System shall alert driver when vehicle deviates from lane.,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0003b:,,,,,To Do,3/18/2026 12:52
+Lane Safety System,AP-8,10017,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:52,3/18/2026 12:52,,,,0,,,,,,,,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i00033:,,,,,To Do,3/18/2026 12:52
+Lane Safety System,AP-7,10015,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:50,3/18/2026 12:50,,,,0,,,,,,,,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0002v:,,,,,To Do,3/18/2026 12:50
+Lane Safety System,AP-6,10014,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:49,3/18/2026 12:49,,,,0,,,,,,,,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0002n:,,,,,To Do,3/18/2026 12:49
+Lane Safety System,AP-5,10013,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:47,3/18/2026 12:47,,,,0,,,,,,,,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0002f:,,,,,To Do,3/18/2026 12:47
+Lane Safety System,AP-4,10012,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:45,3/18/2026 12:45,,,,0,,,,,,,,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i00027:,,,,,To Do,3/18/2026 12:45
+Lane Safety System,AP-3,10011,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:44,3/18/2026 12:44,,,,0,,,,,,,,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0001z:,,,,,To Do,3/18/2026 12:44
+Minimal Epic Test,AP-2,10010,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:43,3/18/2026 12:43,,,,0,,,,,,,,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0001r:,,,,,To Do,3/18/2026 12:43
+Lane Safety System,AP-1,10009,Epic,To Do,AP,AI projects,software,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,Medium,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,3/18/2026 12:27,3/18/2026 12:27,,,,0,,,,,,,,,,,Sneha Sankaran,712020:4ecc6c73-2586-4e79-8475-95bebf5a707a,,,,,,,,,,,0|i0001j:,,,,,To Do,3/18/2026 12:27

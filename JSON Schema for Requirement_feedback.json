@@ -1,0 +1,59 @@
+
+[
+  {
+    "type": "requirement",
+    "summary": "Automatic emergency braking at low-speed",
+    "description": "The vehicle shall automatically apply brakes if an imminent collision is detected at speeds below 30 km/h.",
+    "priority": "High"
+  },
+  {
+    "type": "requirement",
+    "summary": "Adaptive cruise control lane centering",
+    "description": "Cruise control shall actively steer to keep the vehicle centered in the current lane.",
+    "priority": "High"
+  },
+  {
+    "type": "requirement",
+    "summary": "Hands-free voice control for climate system",
+    "description": "Drivers shall be able to adjust the climate control using hands-free voice commands.",
+    "priority": "Medium"
+  },
+  {
+    "type": "requirement",
+    "summary": "OTA (Over-the-Air) software update notifications",
+    "description": "System shall notify users 24 hours in advance when a critical OTA update is scheduled.",
+    "priority": "Medium"
+  },
+  {
+    "type": "requirement",
+    "summary": "Driver drowsiness detection with seat vibration",
+    "description": "When drowsiness is detected, system shall vibrate driver's seat as an alert.",
+    "priority": "High"
+  },
+
+  {
+    "type": "feedback",
+    "summary": "Lane departure warning is delayed",
+    "description": "Noticed that the lane departure warning activates 1-2 seconds after the car actually touches the lane marking."
+  },
+  {
+    "type": "feedback",
+    "summary": "Voice commands ignore AC temp changes above 24°C",
+    "description": "Tried to set the AC to 26°C, but the system keeps defaulting to 24°C."
+  },
+  {
+    "type": "feedback",
+    "summary": "Steering assistance cuts out on sharp curves",
+    "description": "During sharp turns on mountain roads, steering assist disengages without warning."
+  },
+  {
+    "type": "feedback",
+    "summary": "Update notifications are too frequent",
+    "description": "I am receiving update notifications almost daily, which is annoying and distracting."
+  },
+  {
+    "type": "feedback",
+    "summary": "Seat vibration alert is too subtle",
+    "description": "The seat vibration for drowsiness warning is hard to notice on rough roads."
+  }
+]

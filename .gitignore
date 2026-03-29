@@ -1,0 +1,11 @@
+.env
+*.txt
+!requirements.txt
+node_modules/
+data/
+feedback.json
+backlog.html
+backlog.md
+sprint_plan.md
+old/
+github_token.txt
