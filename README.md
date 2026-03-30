@@ -15,6 +15,8 @@ The system operates via four specialized agents, coordinated by a central Orches
 * **Review Agent (Evidence-Based Closure):** Replaces subjective reviews with a 3-layer check (Rule Engine -> Local AI -> Cloud LLM) to verify AC completion. Generates data-driven retrospectives.
 * **The Orchestrator:** Sequences phases, manages shared state and cross-sprint memory, and streams events in real-time via SSE.
 
+* 
+
 ## Key Features & Responsible AI
 * **Responsible AI (RAI):** Features explicit `dataSources` tracking, human-in-the-loop validation (`requiresValidation: true`), output sanitization, RBAC, and comprehensive audit logs.
 * **Offline Mode:** Privacy-first fallback running entirely on local models (Microsoft Foundry Local + Ollama).
@@ -67,8 +69,7 @@ Add the following to your MCP client config to expose orchestrator tools to your
 ```json
 {
   "mcpServers": {
-    "agile-sprint-orchestrator": {
-      "command": "node",
+    "agile-sprint-orchestrator": {      "command": "node",
       "args": ["mcp_server.js"],
       "cwd": "/absolute/path/to/agile"
     }
