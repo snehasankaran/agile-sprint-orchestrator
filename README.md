@@ -13,7 +13,9 @@ The system operates via four specialized agents, coordinated by a central Orches
 * **Planning Agent (Capacity Intelligence):** Applies capacity constraints and uses Azure OpenAI + RAG to match tickets to developers based on skill, availability, and historical velocity.
 * **Development Agent (In-Sprint Monitor):** Evaluates GitHub PRs against Acceptance Criteria (AC), analyzes Teams standups, and tracks real-time sprint health (burndown, at-risk tickets).
 * **Review Agent (Evidence-Based Closure):** Replaces subjective reviews with a 3-layer check (Rule Engine -> Local AI -> Cloud LLM) to verify AC completion. Generates data-driven retrospectives.
-* **The Orchestrator:** Sequences phases, manages shared state and cross-sprint memory, and streams events in real-time via SSE. 
+* **The Orchestrator:** Sequences phases, manages shared state and cross-sprint memory, and streams events in real-time via SSE.
+
+* 
 
 ## Key Features & Responsible AI
 * **Responsible AI (RAI):** Features explicit `dataSources` tracking, human-in-the-loop validation (`requiresValidation: true`), output sanitization, RBAC, and comprehensive audit logs.
