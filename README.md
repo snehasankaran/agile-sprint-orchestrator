@@ -1,7 +1,3 @@
-Here is a concise, streamlined version of your README. It cuts the marketing fluff and narrative while preserving the core architecture, technical details, and setup instructions necessary for developers and users to understand and run the tool.
-
-***
-
 # Agile Sprint Orchestrator
 
 **The Intelligence Layer That Runs Your Sprint**
