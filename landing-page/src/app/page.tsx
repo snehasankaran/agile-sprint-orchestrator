@@ -494,15 +494,76 @@ export default function Home() {
 
       <hr className="section-divider" />
 
+      {/* ── QUESTS USED ── */}
+      <section className="py-28 px-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          Quests Integrated
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {[
+            { title: "Azure OpenAI (GPT-4o)", desc: "LLM-powered evaluation, sprint planning, and intelligence reports via LangChain.js" },
+            { title: "Foundry Local (phi model)", desc: "On-device AI for privacy-first ticket extraction and analysis. Zero data leaves the machine." },
+            { title: "Ollama Embeddings", desc: "RAG vector store (nomic-embed-text) for context-aware decisions using historical sprint data" },
+            { title: "MCP Server", desc: "11 tools exposed via Model Context Protocol for VS Code, GitHub Copilot, and Claude Desktop" },
+            { title: "Azure Developer CLI + Bicep", desc: "Infrastructure-as-code deployment to Azure Container Apps with azd" },
+            { title: "GitHub + MS Graph APIs", desc: "Work product fetching from GitHub, Teams transcript ingestion via Microsoft Graph" },
+          ].map((q) => (
+            <div key={q.title} className="glass-card glow-blue">
+              <h3 className="text-lg font-semibold text-blue-400 mb-2">{q.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{q.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <hr className="section-divider" />
+
       {/* ── BUILT WITH AI ── */}
-      <section className="py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">Built With AI</h2>
-        <p className="text-gray-500 max-w-3xl mx-auto leading-relaxed">
-          This project was built with <strong className="text-gray-300">Cursor (Claude)</strong>{" "}
-          throughout &mdash; architecture, code generation, debugging, and this
-          page. We started with high-level intent and iterated with focused
-          follow-ups. Breaking complex tasks into small, specific prompts worked
-          better than large &ldquo;build everything&rdquo; prompts.
+      <section className="py-28 px-6 section-alt">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          Built With AI
+        </h2>
+        <p className="text-center text-gray-500 mb-14 max-w-2xl mx-auto text-lg">
+          Real prompts. Real workflows. Here&apos;s how we actually built this with Cursor (Claude).
+        </p>
+        <div className="max-w-4xl mx-auto space-y-6">
+          {[
+            {
+              label: "Architecture decision",
+              prompt: "You're comparing HTTP Orchestrator vs LangGraph. What do you recommend?",
+              result: "AI recommended enhancing the existing HTTP orchestrator instead of rewriting -- saving days of work.",
+            },
+            {
+              label: "Feature addition",
+              prompt: "Add intelligence report feature, retry, memory enhancements, AI Manager",
+              result: "AI broke this into 4 tasks and implemented each with retry logic, circuit breakers, and cross-sprint memory.",
+            },
+            {
+              label: "Bug diagnosis",
+              prompt: "Can we have all use cases why is it 0 completion. Realistic data shall help to show the demo",
+              result: "AI traced the root cause to a JavaScript falsy-value bug (|| vs ??) and expanded simulated data.",
+            },
+            {
+              label: "UI consistency",
+              prompt: "GUI is inconsistent between main GUI and sub agents GUI? Dark theme to match the orchestrator",
+              result: "AI systematically updated all 4 agent HTML/CSS and app.js files to match the orchestrator theme.",
+            },
+            {
+              label: "Security cleanup",
+              prompt: "Don't store any secrets like tokens, better folder structure",
+              result: "AI found hardcoded credentials in 6 files, replaced with env vars, created .env.example and .gitignore.",
+            },
+          ].map((p) => (
+            <div key={p.label} className="glass-card glow-purple">
+              <p className="text-purple-400 text-sm font-medium mb-2">{p.label}</p>
+              <p className="text-gray-300 italic mb-3">&ldquo;{p.prompt}&rdquo;</p>
+              <p className="text-gray-500 text-sm">{p.result}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-center text-gray-500 mt-10 max-w-2xl mx-auto">
+          <strong className="text-gray-400">What worked:</strong> Small, focused prompts with clear context.{" "}
+          <strong className="text-gray-400">What didn&apos;t:</strong> Large &ldquo;build everything&rdquo; prompts that needed significant rework.
         </p>
       </section>
 

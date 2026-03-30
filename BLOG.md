@@ -154,13 +154,51 @@ Open `http://localhost:6060`. Click **Run Full Cycle**. Watch all 7 phases execu
 
 ---
 
-## Built With AI
+## Quests Used
 
-This project was built with **Cursor (Claude)** throughout -- architecture, code generation, debugging, and this blog post. Our approach:
+This project integrates multiple technologies from the Build-a-thon quest tracks:
 
-- Started with high-level intent ("build a sprint review agent") and iterated with focused follow-ups
-- Used AI for debugging: the `??` bug, proxy issues, and cross-sprint memory parsing were all diagnosed through iterative prompting
-- Breaking complex tasks into small, specific prompts worked better than large "build everything" prompts
+- **Azure OpenAI (GPT-4o)** -- LLM-powered evaluation, sprint planning, intelligence reports via LangChain.js
+- **Microsoft Foundry Local (phi model)** -- On-device AI for privacy-first ticket extraction and analysis
+- **Ollama Embeddings (nomic-embed-text)** -- RAG vector store for context-aware decisions using historical sprint data
+- **MCP Server (Model Context Protocol)** -- 11 tools exposed for VS Code, GitHub Copilot, and Claude Desktop integration
+- **Azure Developer CLI (azd) + Bicep IaC** -- Infrastructure-as-code deployment to Azure Container Apps
+- **GitHub REST API** -- Work product fetching and PR analysis for the Dev Agent
+- **Microsoft Graph API** -- Teams meeting transcript ingestion for standup processing
+
+---
+
+## Built With AI -- Prompts, Workflows, and Lessons
+
+This project was built with **Cursor (Claude)** from start to finish. Here's how we actually used AI, with real prompts:
+
+**Prompt strategy:** Start broad, then narrow. Each focused prompt produced better results than one massive request.
+
+**Example prompts we used (in order):**
+
+1. *Architecture decision:*
+   > "You're comparing HTTP Orchestrator Architecture vs LangGraph-based Workflow. What do you recommend?"
+   > AI recommended enhancing the existing HTTP orchestrator instead of rewriting -- saving days of work.
+
+2. *Feature addition:*
+   > "Add intelligence report feature, retry, memory enhancements, AI Manager"
+   > AI broke this into 4 tasks and implemented each with retry logic, circuit breakers, and cross-sprint memory.
+
+3. *Bug diagnosis:*
+   > "Can we have all use cases why is it 0 completion. Realistic data shall help to show the demo"
+   > AI traced the root cause to a JavaScript falsy-value bug (`||` vs `??`) and expanded simulated data.
+
+4. *UI consistency:*
+   > "GUI is inconsistent between main GUI and sub agents GUI? Dark theme to match the orchestrator"
+   > AI systematically updated all 4 agent HTML/CSS files and 4 app.js files to match the orchestrator theme.
+
+5. *Security cleanup:*
+   > "Don't store any secrets like tokens, better folder structure"
+   > AI found hardcoded credentials in 6 files, replaced them with env vars, created .env.example and .gitignore.
+
+**What worked:** Breaking complex tasks into specific, focused prompts. Iterating on feedback ("it still shows 0%", "GUI is inconsistent") produced targeted fixes.
+
+**What didn't work:** Large "build everything" prompts produced code that needed significant rework. Smaller prompts with clear context were always better.
 
 ---
 
