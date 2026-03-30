@@ -22,6 +22,12 @@ The system operates via four specialized agents, coordinated by a central Orches
 * **Offline Mode:** Privacy-first fallback running entirely on local models (Microsoft Foundry Local + Ollama).
 * **Cross-Sprint Memory:** Remembers recurring retrospective patterns, velocity trends, and estimation drift across past sprints.
 * **MCP Integration:** 11 built-in tools expose platform capabilities directly to IDEs (Copilot/Claude Desktop).
+* **Cross-Phase Intelligence:** Detects correlations: overcommitment in planning leads to spillover in review leads to recurring retro patterns. Connects dots no human tracks.
+* **Action Recommendations :** Reduce next sprint capacity by 15% based on 3-sprint overcommitment trend." Concrete, actionable, evidence-backed.
+* **Feedback Loop :** Injects historical learnings into new sprint planning. Unresolved retro actions. Recurring risks. Velocity-adjusted capacity.
+* **Daily Health Check:** Real-time sprint status with burndown pace, risk detection, spillover prediction, and AI summary.
+* **Sprint Intelligence Report:** End-of-sprint AI analysis of risks, dependencies, and strategic suggestions for PO and SM.
+* **AI Manager Evaluation:** Cross-sprint team performance: velocity trend, quality trend, predictability, action follow-through. |
 
 ## Tech Stack
 
