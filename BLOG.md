@@ -176,7 +176,7 @@ This project was built with **Cursor (Claude)** throughout -- architecture, code
 ## Links
 
 - **GitHub:** [snehasankaran/agile-sprint-orchestrator](https://github.com/snehasankaran/agile-sprint-orchestrator)
-- **Video Demo:** *(add YouTube/Vimeo link)*
+- **Video Demo:** [Watch on YouTube](https://youtu.be/7eUrJVtNtbQ)
 
 ---
 

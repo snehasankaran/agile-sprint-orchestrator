@@ -528,7 +528,7 @@ export default function Home() {
             >
               GitHub Repository
             </a>
-            <a href="#" className="btn-primary pulse-glow">
+            <a href="https://youtu.be/7eUrJVtNtbQ" target="_blank" className="btn-primary pulse-glow">
               Watch Demo Video
             </a>
           </div>
