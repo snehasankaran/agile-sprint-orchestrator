@@ -8,6 +8,8 @@ Not a chatbot. Not a summary tool. A system of specialized agents that refine yo
 
 > **TL;DR:** We built a multi-agent AI orchestrator that automates all 7 Agile sprint phases -- from backlog refinement to intelligence reporting. Each agent has its own dashboard. A central orchestrator coordinates them, maintains cross-sprint memory, and generates strategic insights for POs and Scrum Masters.
 
+**Used to simulate, validate, and improve real sprint decisions -- not just generate insights.**
+
 ---
 
 ## The Pain
@@ -83,6 +85,29 @@ It also detects **cross-phase correlations** that humans miss:
 - Estimation drift on certain ticket types
 
 An **AI Manager** layer evaluates team performance trends across sprints -- velocity, quality, predictability, and action follow-through -- giving POs and Scrum Masters a strategic view.
+
+Not tracking work -- **deciding outcomes.**
+
+---
+
+## Sprint Risk Intelligence
+
+Before execution begins, the system generates a **Sprint Risk Score (0--100)** -- converting complex sprint signals into a single, actionable decision.
+
+**Example:**
+- **Risk Score: 72 (HIGH)**
+- Key Factors:
+  - Developer overload (150%)
+  - 3 unresolved dependencies
+  - Historical spillover trend (+25%)
+
+**Recommendation:** Reduce scope by 20% or rebalance workload.
+
+This allows teams to answer one critical question instantly:
+
+> "Is this sprint going to fail -- before it even starts?"
+
+Combined with the Monte Carlo simulation (10,000 iterations, Box-Muller Gaussian distribution), the system doesn't just flag risk -- it quantifies the probability of failure and recommends a specific course of action.
 
 ---
 
@@ -203,6 +228,14 @@ This project was built with **Cursor (Claude)** from start to finish. Here's how
 - Proper event bus (Redis/NATS) for production scale
 - End-to-end integration tests across all 5 agents
 - Fine-tuned local models for domain-specific evaluation
+
+---
+
+## Final Thought
+
+Most Agile tools tell you what happened.
+
+This system tells you **what will happen -- and what to do about it.**
 
 ---
 

@@ -131,12 +131,12 @@ const raiFeatures = [
 ];
 
 const highlights = [
+  { icon: "🎯", title: "Decision Intelligence", desc: "Converts complex sprint data into clear, actionable decisions (risk score, recommendations)" },
   { icon: "🤖", title: "Autonomous Execution", desc: "AI runs all 7 sprint phases end-to-end" },
   { icon: "🧠", title: "Cross-Sprint Memory", desc: "Every sprint learns from the last" },
   { icon: "⚡", title: "Hybrid AI", desc: "Cloud (Azure) + Local (Foundry) in one system" },
   { icon: "🛡️", title: "Responsible AI", desc: "Transparency, auditing, and offline mode built in" },
   { icon: "🔗", title: "MCP Protocol", desc: "11 tools accessible from VS Code, Copilot, Claude" },
-  { icon: "📊", title: "5 Live Dashboards", desc: "Real-time UI for every agent and the orchestrator" },
 ];
 
 export default function Home() {
@@ -160,7 +160,10 @@ export default function Home() {
           <p className="mt-6 text-2xl md:text-3xl text-gray-400 font-light italic">
             We don&apos;t track sprints. We predict and optimize them.
           </p>
-          <p className="mt-8 text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-4 text-lg text-blue-300/80 max-w-3xl mx-auto font-medium">
+            Used to simulate, validate, and improve real sprint decisions &mdash; not just generate insights.
+          </p>
+          <p className="mt-6 text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
             An AI system that predicts sprint failure before it happens &mdash;
             and autonomously fixes it. Five specialized agents. Seven phases.
             One intelligent pipeline that learns from every sprint.
@@ -360,6 +363,53 @@ export default function Home() {
               This is <strong className="text-white">decision intelligence</strong>.
             </p>
           </div>
+          <p className="text-gray-500 text-lg mt-8 font-medium">
+            Not tracking work &mdash; <strong className="text-white">deciding outcomes.</strong>
+          </p>
+        </div>
+      </section>
+
+      <hr className="section-divider" />
+
+      {/* ── SPRINT RISK INTELLIGENCE ── */}
+      <section className="py-28 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Sprint Risk Intelligence
+          </h2>
+          <p className="text-gray-400 text-lg mb-10">
+            Before execution begins, the system generates a <strong className="text-white">Sprint Risk Score (0&ndash;100)</strong> &mdash; converting complex sprint signals into a single, actionable decision.
+          </p>
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 rounded-2xl bg-red-500/20 flex items-center justify-center text-3xl">
+                🚨
+              </div>
+              <div>
+                <p className="text-red-400 text-2xl font-bold">Risk Score: 72</p>
+                <p className="text-gray-500 text-sm">HIGH &mdash; Sprint needs intervention</p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4 mb-6">
+              {[
+                { label: "Developer overload", value: "150%", color: "text-red-400" },
+                { label: "Unresolved dependencies", value: "3", color: "text-orange-400" },
+                { label: "Spillover trend", value: "+25%", color: "text-yellow-400" },
+              ].map((f) => (
+                <div key={f.label} className="bg-white/5 rounded-xl p-4 border border-white/5">
+                  <p className={`text-xl font-bold ${f.color}`}>{f.value}</p>
+                  <p className="text-gray-500 text-sm mt-1">{f.label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-white/5 rounded-xl p-4 border border-white/5">
+              <p className="text-sm text-gray-500 mb-1">Recommendation</p>
+              <p className="text-gray-300">Reduce scope by 20% or rebalance workload across team members.</p>
+            </div>
+          </div>
+          <p className="text-center text-gray-500 mt-8 text-lg italic">
+            &ldquo;Is this sprint going to fail &mdash; before it even starts?&rdquo;
+          </p>
         </div>
       </section>
 
@@ -584,10 +634,10 @@ export default function Home() {
       <section className="py-20 px-6 text-center">
         <div className="max-w-3xl mx-auto">
           <p className="text-2xl md:text-3xl text-gray-400 leading-relaxed font-light">
-            Agile today reacts to problems after they happen.
+            Most Agile tools tell you what happened.
           </p>
           <p className="text-2xl md:text-3xl text-white leading-relaxed font-semibold mt-4">
-            This system prevents them before they begin.
+            This system tells you what will happen &mdash; and what to do about it.
           </p>
         </div>
       </section>
