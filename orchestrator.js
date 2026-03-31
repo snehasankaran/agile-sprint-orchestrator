@@ -793,6 +793,56 @@ function buildSprintContext() {
   };
 }
 
+function runMonteCarloSimulation(mem, plannedPoints = 30, iterations = 10000) {
+  const sprints = (mem.sprints || []).filter(s => s.metrics?.completedPoints > 0);
+  if (sprints.length < 2) {
+    return { available: false, reason: "Need at least 2 completed sprints for simulation" };
+  }
+
+  const velocities = sprints.map(s => s.metrics.completedPoints);
+  const mean = velocities.reduce((a, b) => a + b, 0) / velocities.length;
+  const variance = velocities.reduce((a, v) => a + (v - mean) ** 2, 0) / velocities.length;
+  const stdDev = Math.sqrt(variance) || 1;
+
+  function gaussianRandom() {
+    let u = 0, v = 0;
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+    return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+  }
+
+  const simulated = [];
+  for (let i = 0; i < iterations; i++) {
+    const sample = Math.max(0, mean + stdDev * gaussianRandom());
+    simulated.push(sample);
+  }
+
+  simulated.sort((a, b) => a - b);
+  const p50 = simulated[Math.floor(iterations * 0.5)];
+  const p75 = simulated[Math.floor(iterations * 0.75)];
+  const p90 = simulated[Math.floor(iterations * 0.9)];
+  const completionCount = simulated.filter(v => v >= plannedPoints).length;
+  const completionProbability = Math.round((completionCount / iterations) * 100);
+
+  return {
+    available: true,
+    iterations,
+    sampleSize: sprints.length,
+    plannedPoints,
+    historicalMean: Math.round(mean * 10) / 10,
+    historicalStdDev: Math.round(stdDev * 10) / 10,
+    percentiles: {
+      p50: Math.round(p50 * 10) / 10,
+      p75: Math.round(p75 * 10) / 10,
+      p90: Math.round(p90 * 10) / 10
+    },
+    completionProbability,
+    recommendation: completionProbability >= 80 ? "Planned capacity looks achievable" :
+                    completionProbability >= 50 ? "Moderate risk — consider reducing scope by 10-15%" :
+                    "High risk of overcommitment — reduce scope by 20-30%"
+  };
+}
+
 async function runIntelligence() {
   state.currentPhase = "intelligence";
   state.phaseStatus.intelligence = "running";
@@ -801,6 +851,9 @@ async function runIntelligence() {
 
   try {
     const mem = loadMemory();
+    const plannedPts = state.sprint?.capacity || state.velocityData?.currentSprint?.plannedPoints || 30;
+    const monteCarlo = runMonteCarloSimulation(mem, plannedPts);
+
     if (state.offlineMode) {
       const crossPhase = analyzeCrossPhasePatterns(state);
       const actionRecs = generateActionRecommendations(state);
@@ -812,16 +865,18 @@ async function runIntelligence() {
         suggestions: actionRecs.map(r => ({ title: r.action, priority: r.priority, description: r.reason, category: r.type })),
         teamInsights: { workloadBalance: "N/A", moraleIndicator: "N/A", summary: "Offline mode — limited team analysis available." },
         sprintPrediction: { nextSprintSuccess: "N/A", confidence: 0, factors: ["Offline mode — prediction requires cloud AI"] },
+        monteCarlo,
         crossPhaseAnalysis: crossPhase,
         actionRecommendations: actionRecs,
         sprintContext: sprintCtx,
-        dataSources: ["RuleEngine", "FoundryLocal", "RAG", "CrossPhaseAnalysis", "AzureLLM (skipped — offline)"],
+        dataSources: ["RuleEngine", "FoundryLocal", "RAG", "CrossPhaseAnalysis", "MonteCarloSimulation", "AzureLLM (skipped — offline)"],
         generatedAt: new Date().toISOString(),
         highlights: [
           "Offline mode — rule-based intelligence report",
           `${(state.reviewResult?.spillover || []).length} spillover risk(s)`,
           crossPhase.correlations.length > 0 ? `${crossPhase.correlations.length} cross-phase correlation(s)` : null,
-          actionRecs.length > 0 ? `${actionRecs.length} action recommendation(s)` : null
+          actionRecs.length > 0 ? `${actionRecs.length} action recommendation(s)` : null,
+          monteCarlo.available ? `Monte Carlo: ${monteCarlo.completionProbability}% chance of completing ${plannedPts} SP` : null
         ].filter(Boolean)
       };
       state.phaseStatus.intelligence = "done";
@@ -853,11 +908,12 @@ async function runIntelligence() {
       suggestions: report.suggestions || [],
       teamInsights: report.teamInsights || {},
       sprintPrediction: report.sprintPrediction || {},
+      monteCarlo,
       unresolvedActions: report.unresolvedActions || [],
       crossPhaseAnalysis: crossPhase,
       actionRecommendations: actionRecs,
       sprintContext: sprintCtx,
-      dataSources: [...(report.dataSources || []), "CrossPhaseAnalysis"],
+      dataSources: [...(report.dataSources || []), "CrossPhaseAnalysis", "MonteCarloSimulation"],
       generatedAt: report.generatedAt,
       highlights: [
         report.sprintPrediction?.nextSprintSuccess ? `Next sprint success likelihood: ${report.sprintPrediction.nextSprintSuccess}` : null,
@@ -866,7 +922,8 @@ async function runIntelligence() {
         crossPhase.correlations.length > 0 ? `${crossPhase.correlations.length} cross-phase correlation(s) detected` : null,
         crossPhase.rootCauses.length > 0 ? `Root cause: ${crossPhase.rootCauses[0]}` : null,
         actionRecs.length > 0 ? `${actionRecs.length} action recommendation(s) generated` : null,
-        report.teamInsights?.moraleIndicator ? `Team morale: ${report.teamInsights.moraleIndicator}` : null
+        report.teamInsights?.moraleIndicator ? `Team morale: ${report.teamInsights.moraleIndicator}` : null,
+        monteCarlo.available ? `Monte Carlo (${monteCarlo.iterations.toLocaleString()} sims): ${monteCarlo.completionProbability}% chance of completing ${plannedPts} SP` : null
       ].filter(Boolean)
     };
 

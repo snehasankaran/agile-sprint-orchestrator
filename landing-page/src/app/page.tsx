@@ -494,8 +494,36 @@ export default function Home() {
 
       <hr className="section-divider" />
 
-      {/* ── QUESTS USED ── */}
+      {/* ── ACTION CAPABILITIES ── */}
       <section className="py-28 px-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          Action Capabilities
+        </h2>
+        <p className="text-center text-gray-500 mb-14 max-w-2xl mx-auto text-lg">
+          Not just analysis &mdash; our agents take real action on external systems.
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {[
+            { icon: "\u{1F4E4}", title: "Push to JIRA", desc: "Refined backlog tickets and sprint plans are pushed directly to your JIRA board via REST API." },
+            { icon: "\u{1F4E5}", title: "Fetch from JIRA", desc: "Live board, sprint, and ticket data pulled in real-time for planning and review." },
+            { icon: "\u{1F4DD}", title: "MS Teams Transcript Parsing", desc: "Standup insights extracted from Microsoft Teams meeting transcripts via Graph API." },
+            { icon: "\u{1F4CA}", title: "Monte Carlo Prediction", desc: "10,000-iteration simulation forecasts sprint completion probability from historical velocity." },
+            { icon: "\u{1F9E0}", title: "Cross-Sprint Memory", desc: "Retro actions and patterns persist across sprints and auto-feed into next planning cycle." },
+            { icon: "\u{1F6E1}\uFE0F", title: "Responsible AI Guardrails", desc: "Every LLM output is validated, PII-scanned, confidence-scored, and audit-logged." },
+          ].map((cap) => (
+            <div key={cap.title} className="glass-card glow-purple">
+              <div className="text-3xl mb-3">{cap.icon}</div>
+              <h3 className="text-lg font-semibold text-white mb-2">{cap.title}</h3>
+              <p className="text-gray-400 text-sm">{cap.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <hr className="section-divider" />
+
+      {/* ── QUESTS USED ── */}
+      <section className="py-28 px-6 section-alt">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Quests Integrated
         </h2>

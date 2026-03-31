@@ -1,5 +1,12 @@
 # Agile Sprint Orchestrator
 
+![Tests](https://img.shields.io/badge/tests-63%20passed-brightgreen)
+![Agents](https://img.shields.io/badge/agents-5-blue)
+![MCP Tools](https://img.shields.io/badge/MCP%20tools-11-purple)
+![Phases](https://img.shields.io/badge/phases-7-orange)
+![Node](https://img.shields.io/badge/node-%3E%3D20-green)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 **The Intelligence Layer That Runs Your Sprint**
 A Multi-Agent System for Autonomous Agile Lifecycle Management powered by RAG, Local Inference, and MCP.
 

@@ -839,6 +839,35 @@ function App() {
               )
           ),
 
+          // Monte Carlo Simulation
+          phaseResults.intelligence.monteCarlo?.available && h("div", { style: { marginTop: "12px" }, key: "mc" },
+            h("h4", { className: "sub-header" }, "\u{1F3B2} Monte Carlo Sprint Prediction"),
+            h("p", { style: { color: "#8b949e", fontSize: "11px", marginBottom: "8px" } },
+              `Based on ${phaseResults.intelligence.monteCarlo.sampleSize} historical sprint(s), ${phaseResults.intelligence.monteCarlo.iterations.toLocaleString()} simulations`
+            ),
+            h("div", { className: "mini-stats" },
+              miniStat("P50", `${phaseResults.intelligence.monteCarlo.percentiles.p50} SP`, "#58a6ff"),
+              miniStat("P75", `${phaseResults.intelligence.monteCarlo.percentiles.p75} SP`, "#3fb950"),
+              miniStat("P90", `${phaseResults.intelligence.monteCarlo.percentiles.p90} SP`, "#d29922"),
+              miniStat("Completion Prob.", `${phaseResults.intelligence.monteCarlo.completionProbability}%`,
+                phaseResults.intelligence.monteCarlo.completionProbability >= 80 ? "#3fb950" :
+                phaseResults.intelligence.monteCarlo.completionProbability >= 50 ? "#d29922" : "#f85149"),
+              miniStat("Planned", `${phaseResults.intelligence.monteCarlo.plannedPoints} SP`, "#8b949e")
+            ),
+            h("div", { style: {
+              marginTop: "8px", padding: "8px 12px", borderRadius: "6px",
+              background: phaseResults.intelligence.monteCarlo.completionProbability >= 80 ? "#3fb95015" :
+                          phaseResults.intelligence.monteCarlo.completionProbability >= 50 ? "#d2992215" : "#f8514915",
+              border: `1px solid ${phaseResults.intelligence.monteCarlo.completionProbability >= 80 ? "#3fb95033" :
+                       phaseResults.intelligence.monteCarlo.completionProbability >= 50 ? "#d2992233" : "#f8514933"}`
+            } },
+              h("span", { style: { fontSize: "12px", color: "#c9d1d9" } },
+                `\u{1F4CA} ${phaseResults.intelligence.monteCarlo.recommendation}`),
+              h("div", { style: { fontSize: "11px", color: "#8b949e", marginTop: "4px" } },
+                `Historical mean: ${phaseResults.intelligence.monteCarlo.historicalMean} SP | Std dev: ${phaseResults.intelligence.monteCarlo.historicalStdDev} SP`)
+            )
+          ),
+
           // Cross-Phase Analysis
           phaseResults.intelligence.crossPhaseAnalysis?.correlations?.length > 0 && h("div", { style: { marginTop: "12px" }, key: "cross" },
             h("h4", { className: "sub-header red" }, "Cross-Phase Analysis"),

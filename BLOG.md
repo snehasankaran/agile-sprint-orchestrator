@@ -119,6 +119,21 @@ Every AI decision in the system includes:
 
 ---
 
+## Action Capabilities
+
+These agents don't just analyze — they take real action:
+
+| Capability | What It Does |
+|---|---|
+| **Push to JIRA** | Refined backlog tickets and sprint plans are pushed directly to your JIRA board via REST API |
+| **Fetch from JIRA** | Live board, sprint, and ticket data pulled in real-time for planning and review |
+| **MS Teams Transcript Parsing** | Standup insights extracted from Microsoft Teams meeting transcripts via Graph API |
+| **Monte Carlo Prediction** | 10,000-iteration simulation forecasts sprint completion probability from historical velocity |
+| **Cross-Sprint Memory** | Retro actions and patterns persist across sprints and auto-feed into the next planning cycle |
+| **Responsible AI Guardrails** | Every LLM output is validated, PII-scanned, confidence-scored, and audit-logged |
+
+---
+
 ## Tech Stack
 
 - **Runtime:** Node.js 20+, Express.js
