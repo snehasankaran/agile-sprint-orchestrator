@@ -843,6 +843,76 @@ function runMonteCarloSimulation(mem, plannedPoints = 30, iterations = 10000) {
   };
 }
 
+function computeSprintRiskScore(st, mem, monteCarlo) {
+  let score = 0;
+  const factors = [];
+
+  const planned = st.sprint?.capacity || 30;
+  const ctx = buildSprintContext();
+  const avgVelocity = ctx.previousVelocity?.avg || planned;
+
+  const overloadRatio = planned / (avgVelocity || planned);
+  if (overloadRatio > 1.3) {
+    score += 25;
+    factors.push({ label: "Developer overload", value: `${Math.round(overloadRatio * 100)}%`, severity: "high" });
+  } else if (overloadRatio > 1.1) {
+    score += 12;
+    factors.push({ label: "Slight overcommitment", value: `${Math.round(overloadRatio * 100)}%`, severity: "medium" });
+  }
+
+  const unresolvedDeps = (ctx.unresolvedRetroActions || []).length;
+  if (unresolvedDeps >= 3) {
+    score += 20;
+    factors.push({ label: "Unresolved dependencies", value: `${unresolvedDeps}`, severity: "high" });
+  } else if (unresolvedDeps >= 1) {
+    score += 8;
+    factors.push({ label: "Unresolved actions", value: `${unresolvedDeps}`, severity: "medium" });
+  }
+
+  const sprints = (mem.sprintHistory || []).filter(s => s.metrics);
+  const spilloverRates = sprints.map(s => {
+    const total = (s.metrics.totalTickets || 1);
+    return ((s.metrics.spilloverCount || 0) / total) * 100;
+  });
+  if (spilloverRates.length >= 2) {
+    const recentAvg = spilloverRates.slice(-2).reduce((a, b) => a + b, 0) / 2;
+    if (recentAvg > 20) {
+      score += 20;
+      factors.push({ label: "Spillover trend", value: `+${Math.round(recentAvg)}%`, severity: "high" });
+    } else if (recentAvg > 10) {
+      score += 10;
+      factors.push({ label: "Spillover trend", value: `+${Math.round(recentAvg)}%`, severity: "medium" });
+    }
+  }
+
+  if (monteCarlo.available && monteCarlo.completionProbability < 50) {
+    score += 20;
+    factors.push({ label: "Monte Carlo low confidence", value: `${monteCarlo.completionProbability}%`, severity: "high" });
+  } else if (monteCarlo.available && monteCarlo.completionProbability < 75) {
+    score += 10;
+    factors.push({ label: "Monte Carlo moderate confidence", value: `${monteCarlo.completionProbability}%`, severity: "medium" });
+  }
+
+  const recurringPatterns = (ctx.recurringRiskPatterns || []).length;
+  if (recurringPatterns >= 3) {
+    score += 15;
+    factors.push({ label: "Recurring risk patterns", value: `${recurringPatterns}`, severity: "high" });
+  } else if (recurringPatterns >= 1) {
+    score += 5;
+    factors.push({ label: "Recurring patterns", value: `${recurringPatterns}`, severity: "low" });
+  }
+
+  score = Math.min(100, Math.max(0, score));
+  const level = score >= 70 ? "HIGH" : score >= 40 ? "MEDIUM" : "LOW";
+  const recommendation = score >= 70
+    ? "Reduce scope by 20% or rebalance workload across team members."
+    : score >= 40
+    ? "Review capacity allocation and address unresolved action items before sprint starts."
+    : "Sprint looks healthy. Proceed with current plan.";
+
+  return { score, level, factors, recommendation, computedAt: new Date().toISOString() };
+}
+
 async function runIntelligence() {
   state.currentPhase = "intelligence";
   state.phaseStatus.intelligence = "running";
@@ -854,12 +924,16 @@ async function runIntelligence() {
     const plannedPts = state.sprint?.capacity || state.velocityData?.currentSprint?.plannedPoints || 30;
     const monteCarlo = runMonteCarloSimulation(mem, plannedPts);
 
+    const sprintRisk = computeSprintRiskScore(state, mem, monteCarlo);
+    emit("INSIGHT", { message: `Sprint Risk Score: ${sprintRisk.score}/100 (${sprintRisk.level}) — ${sprintRisk.factors.length} factor(s)` });
+
     if (state.offlineMode) {
       const crossPhase = analyzeCrossPhasePatterns(state);
       const actionRecs = generateActionRecommendations(state);
       const sprintCtx = buildSprintContext();
       state.phaseResults.intelligence = {
-        executiveSummary: `Offline mode — rule-based analysis. ${crossPhase.rootCauses.length > 0 ? crossPhase.rootCauses[0] : "No critical root causes detected."} ${actionRecs.length > 0 ? `${actionRecs.length} action(s) recommended.` : ""}`,
+        executiveSummary: `Offline mode — rule-based analysis. Sprint Risk Score: ${sprintRisk.score}/100 (${sprintRisk.level}). ${crossPhase.rootCauses.length > 0 ? crossPhase.rootCauses[0] : "No critical root causes detected."} ${actionRecs.length > 0 ? `${actionRecs.length} action(s) recommended.` : ""}`,
+        sprintRisk,
         risks: (state.reviewResult?.spillover || []).map(t => ({ title: `Spillover: ${t.ticketId}`, severity: "medium", description: t.reason || "Not completed", mitigation: "Carry to next sprint" })),
         dependencies: [],
         suggestions: actionRecs.map(r => ({ title: r.action, priority: r.priority, description: r.reason, category: r.type })),
@@ -872,6 +946,7 @@ async function runIntelligence() {
         dataSources: ["RuleEngine", "FoundryLocal", "RAG", "CrossPhaseAnalysis", "MonteCarloSimulation", "AzureLLM (skipped — offline)"],
         generatedAt: new Date().toISOString(),
         highlights: [
+          `Sprint Risk Score: ${sprintRisk.score}/100 (${sprintRisk.level})`,
           "Offline mode — rule-based intelligence report",
           `${(state.reviewResult?.spillover || []).length} spillover risk(s)`,
           crossPhase.correlations.length > 0 ? `${crossPhase.correlations.length} cross-phase correlation(s)` : null,
@@ -903,6 +978,7 @@ async function runIntelligence() {
 
     state.phaseResults.intelligence = {
       executiveSummary: report.executiveSummary || "",
+      sprintRisk,
       risks: report.risks || [],
       dependencies: report.dependencies || [],
       suggestions: report.suggestions || [],
@@ -916,6 +992,7 @@ async function runIntelligence() {
       dataSources: [...(report.dataSources || []), "CrossPhaseAnalysis", "MonteCarloSimulation"],
       generatedAt: report.generatedAt,
       highlights: [
+        `Sprint Risk Score: ${sprintRisk.score}/100 (${sprintRisk.level})`,
         report.sprintPrediction?.nextSprintSuccess ? `Next sprint success likelihood: ${report.sprintPrediction.nextSprintSuccess}` : null,
         (report.risks || []).length > 0 ? `${report.risks.length} risk(s) identified` : "No significant risks",
         (report.suggestions || []).length > 0 ? `${report.suggestions.length} suggestion(s) for PO/SM` : null,

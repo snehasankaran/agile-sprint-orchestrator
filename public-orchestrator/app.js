@@ -839,6 +839,51 @@ function App() {
               )
           ),
 
+          // Sprint Risk Intelligence
+          phaseResults.intelligence.sprintRisk && h("div", { style: { marginTop: "12px" }, key: "sri" },
+            h("h4", { className: "sub-header" }, "\u{1F6A8} Sprint Risk Intelligence"),
+            h("div", { style: { display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" } },
+              h("div", { style: {
+                width: "56px", height: "56px", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "22px", fontWeight: "bold",
+                background: phaseResults.intelligence.sprintRisk.level === "HIGH" ? "#f8514920" :
+                            phaseResults.intelligence.sprintRisk.level === "MEDIUM" ? "#d2992220" : "#3fb95020",
+                color: phaseResults.intelligence.sprintRisk.level === "HIGH" ? "#f85149" :
+                       phaseResults.intelligence.sprintRisk.level === "MEDIUM" ? "#d29922" : "#3fb950",
+                border: `1px solid ${phaseResults.intelligence.sprintRisk.level === "HIGH" ? "#f8514933" :
+                         phaseResults.intelligence.sprintRisk.level === "MEDIUM" ? "#d2992233" : "#3fb95033"}`
+              } }, phaseResults.intelligence.sprintRisk.score),
+              h("div", null,
+                h("div", { style: { fontSize: "14px", fontWeight: "600", color: "#c9d1d9" } },
+                  `Risk Score: ${phaseResults.intelligence.sprintRisk.score}/100`),
+                h("div", { style: {
+                  fontSize: "11px", fontWeight: "600", marginTop: "2px",
+                  color: phaseResults.intelligence.sprintRisk.level === "HIGH" ? "#f85149" :
+                         phaseResults.intelligence.sprintRisk.level === "MEDIUM" ? "#d29922" : "#3fb950"
+                } }, `${phaseResults.intelligence.sprintRisk.level} — ${
+                  phaseResults.intelligence.sprintRisk.level === "HIGH" ? "Sprint needs intervention" :
+                  phaseResults.intelligence.sprintRisk.level === "MEDIUM" ? "Review before proceeding" : "Sprint looks healthy"
+                }`)
+              )
+            ),
+            phaseResults.intelligence.sprintRisk.factors.length > 0 && h("div", { className: "mini-stats" },
+              ...phaseResults.intelligence.sprintRisk.factors.map(f =>
+                miniStat(f.label, f.value,
+                  f.severity === "high" ? "#f85149" : f.severity === "medium" ? "#d29922" : "#8b949e")
+              )
+            ),
+            h("div", { style: {
+              marginTop: "8px", padding: "8px 12px", borderRadius: "6px",
+              background: phaseResults.intelligence.sprintRisk.level === "HIGH" ? "#f8514915" :
+                          phaseResults.intelligence.sprintRisk.level === "MEDIUM" ? "#d2992215" : "#3fb95015",
+              border: `1px solid ${phaseResults.intelligence.sprintRisk.level === "HIGH" ? "#f8514933" :
+                       phaseResults.intelligence.sprintRisk.level === "MEDIUM" ? "#d2992233" : "#3fb95033"}`
+            } },
+              h("span", { style: { fontSize: "11px", color: "#8b949e" } }, "Recommendation: "),
+              h("span", { style: { fontSize: "12px", color: "#c9d1d9" } }, phaseResults.intelligence.sprintRisk.recommendation)
+            )
+          ),
+
           // Monte Carlo Simulation
           phaseResults.intelligence.monteCarlo?.available && h("div", { style: { marginTop: "12px" }, key: "mc" },
             h("h4", { className: "sub-header" }, "\u{1F3B2} Monte Carlo Sprint Prediction"),
