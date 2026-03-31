@@ -15,11 +15,18 @@ By the time a sprint "fails", it's already too late. Overloaded developers go un
 
 **Agile Sprint Orchestrator is an AI system that predicts sprint failure before it happens — and autonomously fixes it.**
 
-It is a multi-agent decision system that simulates sprint outcomes before execution, detects risk in real-time, learns from every past sprint, and continuously optimizes team performance.
+A multi-agent decision system that:
+- Simulates sprint outcomes before execution
+- Detects risk in real-time
+- Learns from every past sprint
+- Continuously optimizes team performance
 
 ---
 
 ## Why This Is Different
+
+> Traditional tools: track what happened.
+> This system: predicts and changes what will happen.
 
 Unlike traditional Agile tools that track what already happened, this system:
 
@@ -224,6 +231,12 @@ agile/
 ├── azure.yaml / Dockerfile      # Deployment configs
 └── .env.example                 # Environment template
 ```
+
+---
+
+## Final Thought
+
+Agile today reacts to problems after they happen. This system prevents them before they begin.
 
 ---
 
