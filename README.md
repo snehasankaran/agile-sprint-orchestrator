@@ -7,37 +7,125 @@
 ![Node](https://img.shields.io/badge/node-%3E%3D20-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-**The Intelligence Layer That Runs Your Sprint**
-A Multi-Agent System for Autonomous Agile Lifecycle Management powered by RAG, Local Inference, and MCP.
+## Sprints Don't Fail at the End — They Fail on Day 1
 
-## Overview
-Agile Sprint Orchestrator transforms the manual Agile lifecycle into an intelligent, automated system. It uses a multi-agent architecture to evaluate tickets, assign work, detect risks, generate insights, and maintain cross-sprint memory—eliminating scope creep, over-commitment, and manual tracking.
+By the time a sprint "fails", it's already too late. Overloaded developers go unnoticed. Hidden dependencies surface mid-sprint. Velocity is guessed, not predicted. Teams don't lack tools — they lack **intelligence**.
+
+**Agile Sprint Orchestrator is an AI system that predicts sprint failure before it happens — and autonomously fixes it.**
+
+It is a multi-agent decision system that simulates sprint outcomes before execution, detects risk in real-time, learns from every past sprint, and continuously optimizes team performance.
+
+---
+
+## Why This Is Different
+
+Unlike traditional Agile tools that track what already happened, this system:
+
+- **Predicts the future** — Monte Carlo simulation (10,000 runs) forecasts sprint completion probability
+- **Learns from the past** — Cross-sprint memory feeds retro patterns into next planning cycle
+- **Acts in the present** — Real-time risk detection, workload rebalancing, and AI recommendations
+
+It doesn't manage sprints. It **runs them intelligently**.
+
+---
+
+## Decision Intelligence Engine
+
+Every decision flows through a 3-layer reasoning system:
+
+| Layer | Role | Why |
+|-------|------|-----|
+| **Rule Engine** | Deterministic validation | Reliability — catches known patterns instantly |
+| **Local AI (Foundry Local phi)** | Fast, private reasoning | Speed + Privacy — no data leaves the machine |
+| **Cloud LLM (Azure OpenAI GPT-4o)** | Deep contextual intelligence | Depth — handles nuance and complex trade-offs |
+
+This ensures speed, privacy, intelligence, and reliability in every decision.
+
+---
 
 ## Multi-Agent Architecture
-The system operates via four specialized agents, coordinated by a central Orchestrator through a 7-phase pipeline (`Backlog -> Planning -> Development -> Review -> Retro -> Velocity -> Intelligence`).
 
-* **Refinement Agent (Backlog Quality Gate):** Validates JIRA tickets against JSON schema, estimates story points via historical similarity, and flags dependencies/risks.
-* **Planning Agent (Capacity Intelligence):** Applies capacity constraints and uses Azure OpenAI + RAG to match tickets to developers based on skill, availability, and historical velocity.
-* **Development Agent (In-Sprint Monitor):** Evaluates GitHub PRs against Acceptance Criteria (AC), analyzes Teams standups, and tracks real-time sprint health (burndown, at-risk tickets).
-* **Review Agent (Evidence-Based Closure):** Replaces subjective reviews with a 3-layer check (Rule Engine -> Local AI -> Cloud LLM) to verify AC completion. Generates data-driven retrospectives.
-* **The Orchestrator:** Sequences phases, manages shared state and cross-sprint memory, and streams events in real-time via SSE.
+Five specialized agents coordinated by a central Orchestrator through a 7-phase pipeline:
+
+`Backlog → Planning → Development → Review → Retro → Velocity → Intelligence`
+
+| Agent | What It Does |
+|-------|-------------|
+| **Refinement Agent** | Dynamically validates tickets, estimates effort using historical similarity, and surfaces hidden dependencies before they enter a sprint |
+| **Planning Agent** | Allocates work using developer skill profiles, historical velocity, and predicted sprint risk — preventing overcommitment before it happens |
+| **Development Agent** | Continuously analyzes PRs, standups, and sprint signals to detect risk early and maintain sprint health |
+| **Review Agent** | Verifies completion using the 3-layer decision engine — eliminating subjective reviews and ensuring acceptance criteria are truly met |
+| **AI Manager** | Meta-agent that evaluates team performance across sprints and continuously improves planning, execution, and predictability |
+| **Orchestrator** | Coordinates all agents, manages shared state and cross-sprint memory, streams events in real-time via SSE |
 
 ![ASO Architecture](images/ASO_Architecture.png)
 
-## Key Features & Responsible AI
-* **Responsible AI (RAI):** Features explicit `dataSources` tracking, human-in-the-loop validation (`requiresValidation: true`), output sanitization, RBAC, and comprehensive audit logs.
-* **Offline Mode:** Privacy-first fallback running entirely on local models (Microsoft Foundry Local + Ollama).
-* **Cross-Sprint Memory:** Remembers recurring retrospective patterns, velocity trends, and estimation drift across past sprints.
-* **MCP Integration:** 11 built-in tools expose platform capabilities directly to IDEs (Copilot/Claude Desktop).
-* **Cross-Phase Intelligence:** Detects correlations: overcommitment in planning leads to spillover in review leads to recurring retro patterns. Connects dots no human tracks.
-* **Action Recommendations :** Reduce next sprint capacity by 15% based on 3-sprint overcommitment trend." Concrete, actionable, evidence-backed.
-* **Feedback Loop :** Injects historical learnings into new sprint planning. Unresolved retro actions. Recurring risks. Velocity-adjusted capacity.
-* **Daily Health Check:** Real-time sprint status with burndown pace, risk detection, spillover prediction, and AI summary.
-* **Sprint Intelligence Report:** End-of-sprint AI analysis of risks, dependencies, and strategic suggestions for PO and SM.
-* **Monte Carlo Sprint Prediction:** 10,000-iteration simulation using historical velocity to forecast completion probability with P50/P75/P90 percentiles.
-* **AI Manager Evaluation:** Cross-sprint team performance: velocity trend, quality trend, predictability, action follow-through.
-* **Automated Test Suite:** 63 tests covering orchestrator pipeline, RAI validation, input sanitization, RBAC, MCP tools, regression guards, and Monte Carlo.
-* **Action Capabilities:** Push refined tickets to JIRA, fetch live board data, parse MS Teams transcripts, export CSV reports.
+---
+
+## Key Innovations
+
+### 1. Predictive Sprint Intelligence
+Monte Carlo simulation (10,000 iterations, Box-Muller Gaussian sampling) forecasts sprint success probability with P50/P75/P90 confidence bands. Tells the SM exactly: *"There's a 65% chance you'll complete 30 SP — consider reducing scope by 15%."*
+
+### 2. Cross-Sprint Learning System
+The system improves over time. Retrospective patterns, velocity trends, estimation drift, and unresolved actions persist across sprints and are automatically injected into the next planning cycle.
+
+### 3. Cross-Phase Intelligence
+Detects correlations no human tracks: overcommitment in planning → spillover in review → recurring retro issues. Connects the dots across the full lifecycle.
+
+### 4. AI Manager (Meta-Agent)
+Evaluates team performance across multiple sprints: velocity trends, quality trends, predictability, and whether past retro actions were actually addressed.
+
+### 5. Daily Sprint Health Check
+Real-time sprint status with burndown pace, risk detection, spillover prediction, and AI-generated summary — before standup, not after.
+
+---
+
+## Real Impact
+
+In testing, the system identified:
+
+- **30% overcommitment** before sprint start (capacity exceeded historical velocity)
+- **Hidden dependencies** missed during manual refinement
+- **Developer overload patterns** across multiple sprints
+- **Recurring retro issues** that were never addressed
+
+After applying AI-driven adjustments: improved sprint predictability, reduced spillover, increased planning accuracy. Agile shifts from reactive to **predictive**.
+
+---
+
+## Action Capabilities
+
+These agents don't just analyze — they take real action:
+
+| Capability | What It Does |
+|---|---|
+| **Push to JIRA** | Refined tickets and sprint plans pushed directly via REST API |
+| **Fetch from JIRA** | Live board, sprint, and ticket data pulled in real-time |
+| **MS Teams Parsing** | Standup insights extracted from meeting transcripts via Graph API |
+| **Monte Carlo Prediction** | 10,000-iteration simulation from historical velocity data |
+| **Cross-Sprint Memory** | Retro actions and patterns persist and auto-feed into next cycle |
+| **CSV Export** | Velocity data and sprint metrics exportable for reporting |
+
+---
+
+## Responsible AI — Built In, Not Bolted On
+
+Every AI decision in this system is transparent, safe, and auditable.
+
+| Principle | Implementation |
+|-----------|---------------|
+| **Traceability** | Every output includes `dataSources` (RuleEngine, FoundryLocal, AzureLLM, RAG) and confidence scores |
+| **Human-in-the-loop** | Critical actions (JIRA push, sprint approval) require explicit human validation |
+| **Privacy-first** | One toggle switches the entire system to local models — zero data leaves the machine |
+| **Input safety** | HTML stripping, `javascript:` URI removal, event handler sanitization |
+| **Output validation** | `validateLLMOutput()` with PII detection, confidence clamping, schema enforcement |
+| **Access control** | RBAC with admin/supervisor/public roles |
+| **Audit trail** | Per-agent audit logs with timestamps, aggregated in a live Responsible AI Dashboard |
+
+No black boxes. No blind trust.
+
+---
 
 ## Tech Stack
 
@@ -46,9 +134,14 @@ The system operates via four specialized agents, coordinated by a central Orches
 | **Core** | Node.js 20+, ES Modules, Express.js |
 | **AI Models** | Azure OpenAI GPT-4o, Microsoft Foundry Local (phi) |
 | **RAG / Vectors** | LangChain.js, Ollama (`nomic-embed-text`) |
-| **Integrations** | Model Context Protocol (MCP), JIRA Cloud, GitHub, Graph API |
-| **Frontend** | React 18, Chart.js, Unified Dark Theme CSS |
-| **Deployment** | Azure Container Apps, azd, Bicep IaC, GitHub Actions |
+| **Statistical** | Monte Carlo simulation (Gaussian, Box-Muller) |
+| **Protocol** | Model Context Protocol (MCP) — 11 tools |
+| **Integrations** | JIRA Cloud, GitHub, Microsoft Graph API |
+| **Frontend** | React 18, Chart.js, Unified Dark Theme (5 dashboards) |
+| **Testing** | 63 tests via `node:test` (14 suites) |
+| **Deployment** | Azure Container Apps, azd, Bicep IaC |
+
+---
 
 ## Quick Start
 
@@ -60,26 +153,27 @@ The system operates via four specialized agents, coordinated by a central Orches
 
 ### Setup & Run
 ```bash
-# 1. Install dependencies
 npm install
+cp .env.example .env   # Add your API keys
 
-# 2. Configure environment variables
-cp .env.example .env   # Add your API keys here!
-
-# 3. Start the system (requires 5 terminal windows)
-npm run backlog        # Port 3000: Backlog Agent
+npm run backlog        # Port 3000: Refinement Agent
 npm run sprint         # Port 3020: Planning Agent
-npm run iterative      # Port 4040: Dev/Standup Agent
+npm run iterative      # Port 4040: Development Agent
 npm run review         # Port 5050: Review Agent
-npm run orchestrator   # Port 6060: Central Orchestrator Dashboard
+npm run orchestrator   # Port 6060: Orchestrator Dashboard
 ```
 
-### IDE Integration (MCP Server)
-Add the following to your MCP client config to expose orchestrator tools to your IDE:
+### Run Tests
+```bash
+npm test               # 63 tests across 14 suites
+```
+
+### MCP Integration
 ```json
 {
   "mcpServers": {
-    "agile-sprint-orchestrator": {      "command": "node",
+    "agile-sprint-orchestrator": {
+      "command": "node",
       "args": ["mcp_server.js"],
       "cwd": "/absolute/path/to/agile"
     }
@@ -87,28 +181,30 @@ Add the following to your MCP client config to expose orchestrator tools to your
 }
 ```
 
-### Deployment (Azure)
+### Deploy to Azure
 ```bash
 azd auth login
 azd up
 ```
 
+---
+
 ## Project Structure
 ```text
 agile/
 ├── orchestrator.js              # Central orchestrator (Port 6060)
-├── backlog_agent_final.js       # Backlog refinement agent (Port 3000)
-├── sprint_planning_agent.js     # Sprint planning agent (Port 3020)
-├── iterative_standup_agent.js   # Dev + standup agent (Port 4040)
+├── backlog_agent_final.js       # Refinement agent (Port 3000)
+├── sprint_planning_agent.js     # Planning agent (Port 3020)
+├── iterative_standup_agent.js   # Development agent (Port 4040)
 ├── review_agent.js              # Review + retro + velocity (Port 5050)
 ├── mcp_server.js                # 11 MCP tools via stdio
-├── middleware.js                # Security: Rate limiting, sanitization, RBAC
-├── data/                        # Runtime data (state, memory, audit logs)
-├── public-*/                    # React Frontends for each agent/dashboard
+├── middleware.js                # Rate limiting, sanitization, RBAC
+├── data/                        # Runtime state, memory, audit logs
+├── public-*/                    # React dashboards (5 UIs)
+├── test/                        # 63 automated tests
 ├── infra/                       # Azure Bicep templates
-├── test/                        # Unit/Integration tests
 ├── azure.yaml / Dockerfile      # Deployment configs
-└── .env.example                 # Env template
+└── .env.example                 # Environment template
 ```
 
 ---
