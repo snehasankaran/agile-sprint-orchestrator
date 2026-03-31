@@ -13,13 +13,33 @@
 
 By the time a sprint "fails", it's already too late. Overloaded developers go unnoticed. Hidden dependencies surface mid-sprint. Velocity is guessed, not predicted. Teams don't lack tools — they lack **intelligence**.
 
-**Agile Sprint Orchestrator is an AI system that predicts sprint failure before it happens — and autonomously fixes it.**
+**Agile Sprint Orchestrator is an AI system that predicts — and actively prevents — sprint failure before it happens.**
 
 A multi-agent decision system that:
 - Simulates sprint outcomes before execution
 - Detects risk in real-time
 - Learns from every past sprint
 - Continuously optimizes team performance
+
+## At a Glance
+
+- **Predicts** sprint success before execution (Monte Carlo, 10,000 simulations)
+- **5 AI agents** + orchestrator coordinating a 7-phase pipeline
+- **Learns** across sprints with persistent cross-sprint memory
+- **Runs fully offline** with Foundry Local + Ollama (privacy-first)
+- **Takes real actions** — pushes to JIRA, fetches live data, parses Teams transcripts
+- **63 automated tests** across 14 suites
+- **11 MCP tools** for IDE integration (Copilot, Claude Desktop)
+
+---
+
+## The Moment It Clicked
+
+During testing, the system predicted a sprint would fail — before it even started. Not because of bugs. Not because of deadlines. Because one developer was silently overloaded.
+
+After rebalancing workload, the prediction changed.
+
+That's when it became clear: this isn't automation. This is **decision intelligence**.
 
 ---
 
@@ -49,6 +69,18 @@ Every decision flows through a 3-layer reasoning system:
 | **Cloud LLM (Azure OpenAI GPT-4o)** | Deep contextual intelligence | Depth — handles nuance and complex trade-offs |
 
 This ensures speed, privacy, intelligence, and reliability in every decision. **Offline Mode** switches the entire pipeline to local models (Foundry Local + Ollama) — zero data leaves the machine, critical for enterprises with sensitive sprint data.
+
+---
+
+## How It Works
+
+1. **Ingest** backlog from JIRA (or paste raw requirements)
+2. **Simulate** sprint outcomes using Monte Carlo
+3. **Plan** sprint with AI agents (capacity, skills, velocity)
+4. **Monitor** execution in real-time (PRs, standups, signals)
+5. **Detect** risks early and recommend adjustments
+6. **Review** completion with 3-layer evidence-based evaluation
+7. **Learn** — persist patterns and improve next sprint automatically
 
 ---
 
@@ -106,16 +138,6 @@ In testing, the system identified:
 - **Recurring retro issues** that were never addressed
 
 After applying AI-driven adjustments: improved sprint predictability, reduced spillover, increased planning accuracy. The system didn't just analyze the sprint — it changed its outcome. Agile shifts from reactive to **predictive**.
-
----
-
-## The Moment It Clicked
-
-During testing, the system predicted a sprint would fail — before it even started. Not because of bugs. Not because of deadlines. Because one developer was silently overloaded.
-
-After rebalancing workload, the prediction changed.
-
-That's when it became clear: this isn't automation. This is **decision intelligence**.
 
 ---
 
@@ -231,6 +253,31 @@ agile/
 ├── azure.yaml / Dockerfile      # Deployment configs
 └── .env.example                 # Environment template
 ```
+
+---
+
+## Why This Stands Out
+
+- Goes beyond tracking — **predicts and fixes outcomes**
+- Combines **simulation + multi-agent + memory** (rare integration)
+- Executes real actions on external systems (not just insights)
+- Built with **Responsible AI principles end-to-end**
+- Works **online and fully offline** (enterprise-ready)
+
+This is not a dashboard. It's an **intelligent decision system for Agile execution**.
+
+---
+
+## Built with AI
+
+This project was developed using AI-assisted workflows throughout:
+
+- **GitHub Copilot** for agent logic, API integration, and architecture scaffolding
+- **Prompt-engineered workflows** for multi-agent reasoning and decision validation
+- **AI-driven test generation** — 63 tests across orchestrator, RAI, regression, MCP, and Monte Carlo
+- **Iterative prompt refinement** to improve planning accuracy, review quality, and risk detection
+
+This project demonstrates not just AI usage — but **AI-accelerated system design**.
 
 ---
 
