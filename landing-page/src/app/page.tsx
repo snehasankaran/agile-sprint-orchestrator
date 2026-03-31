@@ -254,8 +254,10 @@ export default function Home() {
             <div className="p-3 border-b border-white/5 text-gray-300 text-sm">Prevents issues</div>
             <div className="p-3 border-b border-r border-white/5 text-gray-500 text-sm">Manual planning</div>
             <div className="p-3 border-b border-white/5 text-gray-300 text-sm">AI-optimized planning</div>
-            <div className="p-3 border-r border-white/5 text-gray-500 text-sm">Static velocity</div>
-            <div className="p-3 text-gray-300 text-sm">Adaptive learning</div>
+            <div className="p-3 border-b border-r border-white/5 text-gray-500 text-sm">Static velocity</div>
+            <div className="p-3 border-b border-white/5 text-gray-300 text-sm">Adaptive learning</div>
+            <div className="p-3 border-r border-white/5 text-gray-500 text-sm">Generates suggestions</div>
+            <div className="p-3 text-gray-300 text-sm">Takes action (JIRA, GitHub, Teams)</div>
           </div>
         </div>
       </section>
