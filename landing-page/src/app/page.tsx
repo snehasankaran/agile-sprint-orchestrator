@@ -161,7 +161,7 @@ export default function Home() {
             We don&apos;t track sprints. We predict and optimize them.
           </p>
           <p className="mt-4 text-lg text-blue-300/80 max-w-3xl mx-auto font-medium">
-            Teams lose 30&ndash;40% of sprint effort to poor planning and overcommitment. This system prevents that &mdash; before the sprint even begins.
+            Teams lose 30&ndash;40% of sprint effort due to poor planning and overcommitment. This system prevents that &mdash; before the sprint even begins.
           </p>
           <p className="mt-6 text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
             An AI system that predicts sprint failure before it happens &mdash;
