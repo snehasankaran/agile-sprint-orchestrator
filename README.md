@@ -15,6 +15,8 @@ By the time a sprint "fails", it's already too late. Overloaded developers go un
 
 **Agile Sprint Orchestrator is an AI system that predicts — and actively prevents — sprint failure before it happens.**
 
+> Teams lose 30–40% of sprint effort due to poor planning, hidden dependencies, and overcommitment. This system prevents that — before the sprint even begins.
+
 A multi-agent decision system that:
 - Simulates sprint outcomes before execution
 - Detects risk in real-time
