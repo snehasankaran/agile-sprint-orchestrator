@@ -157,13 +157,13 @@ export default function Home() {
             <br />
             <span className="gradient-text">Orchestrator</span>
           </h1>
-          <p className="mt-6 text-2xl md:text-3xl text-gray-400 font-light">
-            Agents for Impact
+          <p className="mt-6 text-2xl md:text-3xl text-gray-400 font-light italic">
+            We don&apos;t track sprints. We predict and optimize them.
           </p>
           <p className="mt-8 text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
-            We built a system where AI doesn&apos;t just assist Agile teams
-            &mdash; it runs them. Five specialized agents. Seven automated
-            phases. One intelligent pipeline that learns from every sprint.
+            An AI system that predicts sprint failure before it happens &mdash;
+            and autonomously fixes it. Five specialized agents. Seven phases.
+            One intelligent pipeline that learns from every sprint.
           </p>
           <div className="mt-10 flex justify-center gap-4 flex-wrap">
             <a
@@ -195,11 +195,12 @@ export default function Home() {
       {/* ── THE PAIN ── */}
       <section className="py-28 px-6 max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          The Problem
+          Sprints Don&apos;t Fail at the End &mdash; They Fail on Day 1
         </h2>
         <p className="text-center text-gray-500 mb-16 max-w-2xl mx-auto text-lg">
-          Every two weeks, the same cycle repeats. The data to make better
-          decisions exists &mdash; but nothing connects it.
+          By the time a sprint looks &ldquo;at risk,&rdquo; it&apos;s already
+          too late. The data to prevent failure exists &mdash; but nothing
+          connects it.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           {painPoints.map((p) => (
@@ -240,6 +241,20 @@ export default function Home() {
         <p className="mt-10 text-purple-400 font-semibold text-lg">
           Five agents. Seven phases. One intelligent pipeline.
         </p>
+        <div className="mt-16 max-w-2xl mx-auto text-left">
+          <div className="grid grid-cols-2 gap-0 rounded-xl overflow-hidden border border-white/10">
+            <div className="p-4 bg-red-500/10 border-b border-r border-white/10 text-red-400 font-semibold text-sm">Traditional Agile</div>
+            <div className="p-4 bg-green-500/10 border-b border-white/10 text-green-400 font-semibold text-sm">This System</div>
+            <div className="p-3 border-b border-r border-white/5 text-gray-500 text-sm">Tracks progress</div>
+            <div className="p-3 border-b border-white/5 text-gray-300 text-sm">Predicts outcomes</div>
+            <div className="p-3 border-b border-r border-white/5 text-gray-500 text-sm">Reacts to issues</div>
+            <div className="p-3 border-b border-white/5 text-gray-300 text-sm">Prevents issues</div>
+            <div className="p-3 border-b border-r border-white/5 text-gray-500 text-sm">Manual planning</div>
+            <div className="p-3 border-b border-white/5 text-gray-300 text-sm">AI-optimized planning</div>
+            <div className="p-3 border-r border-white/5 text-gray-500 text-sm">Static velocity</div>
+            <div className="p-3 text-gray-300 text-sm">Adaptive learning</div>
+          </div>
+        </div>
       </section>
 
       <hr className="section-divider" />
@@ -317,6 +332,33 @@ export default function Home() {
                 {item}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <hr className="section-divider" />
+
+      {/* ── MOMENT IT CLICKED ── */}
+      <section className="py-28 px-6 section-alt">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            The Moment It Clicked
+          </h2>
+          <p className="text-gray-400 leading-relaxed text-lg mb-6">
+            During testing, the system flagged a sprint as &ldquo;high
+            risk&rdquo; &mdash; before it even started.
+          </p>
+          <p className="text-gray-400 leading-relaxed text-lg mb-6">
+            No bugs. No blockers. Just one silently overloaded developer.
+          </p>
+          <p className="text-gray-400 leading-relaxed text-lg mb-6">
+            We redistributed work. The prediction changed.
+          </p>
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 mt-10">
+            <p className="text-blue-300 text-xl leading-relaxed italic">
+              That&apos;s when it became clear: this isn&apos;t automation.
+              This is <strong className="text-white">decision intelligence</strong>.
+            </p>
           </div>
         </div>
       </section>
@@ -534,6 +576,20 @@ export default function Home() {
           <strong className="text-gray-400">What worked:</strong> Small, focused prompts with clear context.{" "}
           <strong className="text-gray-400">What didn&apos;t:</strong> Large &ldquo;build everything&rdquo; prompts that needed significant rework.
         </p>
+      </section>
+
+      <hr className="section-divider" />
+
+      {/* ── FINAL THOUGHT ── */}
+      <section className="py-20 px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-2xl md:text-3xl text-gray-400 leading-relaxed font-light">
+            Agile today reacts to problems after they happen.
+          </p>
+          <p className="text-2xl md:text-3xl text-white leading-relaxed font-semibold mt-4">
+            This system prevents them before they begin.
+          </p>
+        </div>
       </section>
 
       <hr className="section-divider" />
