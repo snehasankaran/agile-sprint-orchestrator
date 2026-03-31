@@ -86,26 +86,6 @@ An **AI Manager** layer evaluates team performance trends across sprints -- velo
 
 ---
 
-## The Bug That Almost Killed the Demo
-
-Here's a war story. During testing, every sprint showed **0% completion**. Every ticket failed. We spent hours debugging.
-
-The root cause? One character.
-
-```javascript
-// BEFORE: 0 is falsy in JavaScript, so 0 || 100 = 100 (failure!)
-Number(review.metrics?.testFailureRatePercent || 100) === 0;
-
-// AFTER: ?? only falls back on null/undefined, not 0
-Number(review.metrics?.testFailureRatePercent ?? 100) === 0;
-```
-
-A `testFailureRatePercent` of `0` (perfect score) was being treated as `100` (total failure) because `0` is falsy in JavaScript. Changing `||` to `??` -- one character -- fixed the entire system.
-
-**Lesson:** Always use nullish coalescing (`??`) for numeric values. `||` will betray you.
-
----
-
 ## Responsible AI -- Not an Afterthought
 
 Every AI decision in the system includes:

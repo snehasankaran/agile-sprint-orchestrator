@@ -323,65 +323,6 @@ export default function Home() {
 
       <hr className="section-divider" />
 
-      {/* ── BUG STORY ── */}
-      <section className="py-28 px-6 section-alt">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            The Bug That Almost Killed the Demo
-          </h2>
-          <p className="text-gray-400 leading-relaxed text-lg mb-10">
-            During testing, every sprint showed{" "}
-            <strong className="text-red-400">0% completion</strong>. Every
-            ticket failed. We spent hours debugging. The root cause? One
-            character.
-          </p>
-          <div className="code-block">
-            <p className="text-red-400/80 mb-1">
-              {"// BEFORE: 0 is falsy, so 0 || 100 = 100 (failure!)"}
-            </p>
-            <p className="text-gray-300 text-base">
-              {"Number(value "}
-              <span className="text-red-400 font-bold text-lg">{"||"}</span>
-              {" 100) === 0;"}
-            </p>
-            <br />
-            <p className="text-green-400/80 mb-1">
-              {"// AFTER: ?? only falls back on null/undefined, not 0"}
-            </p>
-            <p className="text-gray-300 text-base">
-              {"Number(value "}
-              <span className="text-green-400 font-bold text-lg">{"??"}</span>
-              {" 100) === 0;"}
-            </p>
-          </div>
-          <p className="text-gray-400 mt-8 leading-relaxed text-lg">
-            A{" "}
-            <code className="text-amber-300 bg-white/5 px-2 py-1 rounded text-sm">
-              testFailureRatePercent
-            </code>{" "}
-            of{" "}
-            <code className="text-amber-300 bg-white/5 px-2 py-1 rounded text-sm">
-              0
-            </code>{" "}
-            (perfect) was treated as{" "}
-            <code className="text-amber-300 bg-white/5 px-2 py-1 rounded text-sm">
-              100
-            </code>{" "}
-            (failure). Changing{" "}
-            <code className="text-red-400 bg-white/5 px-2 py-1 rounded text-sm">
-              ||
-            </code>{" "}
-            to{" "}
-            <code className="text-green-400 bg-white/5 px-2 py-1 rounded text-sm">
-              ??
-            </code>{" "}
-            &mdash; one character &mdash; fixed everything.
-          </p>
-        </div>
-      </section>
-
-      <hr className="section-divider" />
-
       {/* ── RESPONSIBLE AI ── */}
       <section className="py-28 px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
