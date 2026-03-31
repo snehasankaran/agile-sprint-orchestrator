@@ -7,6 +7,8 @@
 ![Node](https://img.shields.io/badge/node-%3E%3D20-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
+> *We don't track sprints. We predict and optimize them.*
+
 ## Sprints Don't Fail at the End — They Fail on Day 1
 
 By the time a sprint "fails", it's already too late. Overloaded developers go unnoticed. Hidden dependencies surface mid-sprint. Velocity is guessed, not predicted. Teams don't lack tools — they lack **intelligence**.
@@ -96,13 +98,23 @@ In testing, the system identified:
 - **Developer overload patterns** across multiple sprints
 - **Recurring retro issues** that were never addressed
 
-After applying AI-driven adjustments: improved sprint predictability, reduced spillover, increased planning accuracy. Agile shifts from reactive to **predictive**.
+After applying AI-driven adjustments: improved sprint predictability, reduced spillover, increased planning accuracy. The system didn't just analyze the sprint — it changed its outcome. Agile shifts from reactive to **predictive**.
+
+---
+
+## The Moment It Clicked
+
+During testing, the system predicted a sprint would fail — before it even started. Not because of bugs. Not because of deadlines. Because one developer was silently overloaded.
+
+After rebalancing workload, the prediction changed.
+
+That's when it became clear: this isn't automation. This is **decision intelligence**.
 
 ---
 
 ## Action Capabilities
 
-These agents don't just analyze — they take real action:
+These agents don't just generate insights — they execute decisions in real systems:
 
 | Capability | What It Does |
 |---|---|
