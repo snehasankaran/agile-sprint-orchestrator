@@ -39,7 +39,7 @@ Every decision flows through a 3-layer reasoning system:
 | **Local AI (Foundry Local phi)** | Fast, private reasoning | Speed + Privacy — no data leaves the machine |
 | **Cloud LLM (Azure OpenAI GPT-4o)** | Deep contextual intelligence | Depth — handles nuance and complex trade-offs |
 
-This ensures speed, privacy, intelligence, and reliability in every decision.
+This ensures speed, privacy, intelligence, and reliability in every decision. **Offline Mode** switches the entire pipeline to local models (Foundry Local + Ollama) — zero data leaves the machine, critical for enterprises with sensitive sprint data.
 
 ---
 
@@ -78,6 +78,12 @@ Evaluates team performance across multiple sprints: velocity trends, quality tre
 
 ### 5. Daily Sprint Health Check
 Real-time sprint status with burndown pace, risk detection, spillover prediction, and AI-generated summary — before standup, not after.
+
+### 6. Sprint Intelligence Report
+End-of-sprint AI analysis combining risks, dependencies, and strategic suggestions for Product Owners and Scrum Masters — powered by cross-phase correlation data.
+
+### 7. Feedback Loop
+Automatically injects historical learnings into new sprint planning: unresolved retro actions, recurring risks, and velocity-adjusted capacity recommendations.
 
 ---
 
