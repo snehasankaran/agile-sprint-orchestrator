@@ -34,7 +34,10 @@ The system operates via four specialized agents, coordinated by a central Orches
 * **Feedback Loop :** Injects historical learnings into new sprint planning. Unresolved retro actions. Recurring risks. Velocity-adjusted capacity.
 * **Daily Health Check:** Real-time sprint status with burndown pace, risk detection, spillover prediction, and AI summary.
 * **Sprint Intelligence Report:** End-of-sprint AI analysis of risks, dependencies, and strategic suggestions for PO and SM.
-* **AI Manager Evaluation:** Cross-sprint team performance: velocity trend, quality trend, predictability, action follow-through. |
+* **Monte Carlo Sprint Prediction:** 10,000-iteration simulation using historical velocity to forecast completion probability with P50/P75/P90 percentiles.
+* **AI Manager Evaluation:** Cross-sprint team performance: velocity trend, quality trend, predictability, action follow-through.
+* **Automated Test Suite:** 63 tests covering orchestrator pipeline, RAI validation, input sanitization, RBAC, MCP tools, regression guards, and Monte Carlo.
+* **Action Capabilities:** Push refined tickets to JIRA, fetch live board data, parse MS Teams transcripts, export CSV reports.
 
 ## Tech Stack
 
