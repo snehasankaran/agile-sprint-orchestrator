@@ -274,7 +274,7 @@ This is not a dashboard. It's an **intelligent decision system for Agile executi
 
 This project was developed using AI-assisted workflows throughout:
 
-- **Cursor (Claude)** for agent logic, API integration, architecture design, and debugging
+- **Github Copilot** and **Cursor (Claude)** for agent logic, API integration, architecture design, and debugging
 - **Prompt-engineered workflows** for multi-agent reasoning and decision validation
 - **AI-driven test generation** — 63 tests across orchestrator, RAI, regression, MCP, and Monte Carlo
 - **Iterative prompt refinement** to improve planning accuracy, review quality, and risk detection
