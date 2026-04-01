@@ -5,6 +5,7 @@
 ![MCP Tools](https://img.shields.io/badge/MCP%20tools-11-purple)
 ![Phases](https://img.shields.io/badge/phases-7-orange)
 ![Node](https://img.shields.io/badge/node-%3E%3D20-green)
+![Built with](https://img.shields.io/badge/built%20with-GitHub%20Copilot%20%2B%20Cursor-blueviolet)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 > *We don't track sprints. We predict and optimize them.*
@@ -274,12 +275,13 @@ This is not a dashboard. It's an **intelligent decision system for Agile executi
 
 This project was developed using AI-assisted workflows throughout:
 
-- **Github Copilot** and **Cursor (Claude)** for agent logic, API integration, architecture design, and debugging
+- **GitHub Copilot** for initial scaffolding, code generation, and rapid prototyping during early development
+- **Cursor (Claude)** for agent logic, API integration, architecture design, and deep debugging as the system grew in complexity
 - **Prompt-engineered workflows** for multi-agent reasoning and decision validation
 - **AI-driven test generation** — 63 tests across orchestrator, RAI, regression, MCP, and Monte Carlo
 - **Iterative prompt refinement** to improve planning accuracy, review quality, and risk detection
 
-This project demonstrates not just AI usage — but **AI-accelerated system design**.
+From Copilot's speed in bootstrapping to Cursor's depth in orchestrating multi-agent systems — this project demonstrates not just AI usage, but **AI-accelerated system design**.
 
 ---
 
