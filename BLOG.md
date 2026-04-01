@@ -190,7 +190,7 @@ This project integrates multiple technologies from the Build-a-thon quest tracks
 
 ## Built With AI -- Prompts, Workflows, and Lessons
 
-This project was built with **Cursor (Claude)** from start to finish. Here's how we actually used AI, with real prompts:
+This project was built with **Github Copilot** and **Cursor (Claude)** from start to finish. Here's how we actually used AI, with real prompts:
 
 **Prompt strategy:** Start broad, then narrow. Each focused prompt produced better results than one massive request.
 
