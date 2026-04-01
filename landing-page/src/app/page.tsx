@@ -587,7 +587,7 @@ export default function Home() {
           Built With AI
         </h2>
         <p className="text-center text-gray-500 mb-14 max-w-2xl mx-auto text-lg">
-          Real prompts. Real workflows. Here&apos;s how we actually built this with Cursor (Claude).
+          Real prompts. Real workflows. Built with <strong className="text-purple-400">GitHub Copilot</strong> for early scaffolding and rapid prototyping, then <strong className="text-blue-400">Cursor (Claude)</strong> for deep architecture and debugging.
         </p>
         <div className="max-w-4xl mx-auto space-y-6">
           {[
